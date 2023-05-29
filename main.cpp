@@ -9,13 +9,15 @@
 #include <iomanip>
 #include "open3d/Open3D.h"
 #include "src/PointCloudProcessor.h"
+#include "filesystem"
 
 
 int main() {
     // read original point cloud
-    std::shared_ptr<open3d::geometry::PointCloud> pOrigPointcloud = open3d::io::CreatePointCloudFromFile("/home/guli/CLionProjects/EPFL/data/DemoICPPointClouds/cloud_bin_0.pcd");
+
+    std::shared_ptr<open3d::geometry::PointCloud> pOrigPointcloud = open3d::io::CreatePointCloudFromFile("");
     // read target point cloud
-    std::shared_ptr<open3d::geometry::PointCloud> pTargetPointcloud = open3d::io::CreatePointCloudFromFile("/home/guli/CLionProjects/EPFL/data/DemoICPPointClouds/cloud_bin_1.pcd");
+    std::shared_ptr<open3d::geometry::PointCloud> pTargetPointcloud = open3d::io::CreatePointCloudFromFile("");
 
     PointCloudProcessor Obj(pOrigPointcloud, pTargetPointcloud);
 
